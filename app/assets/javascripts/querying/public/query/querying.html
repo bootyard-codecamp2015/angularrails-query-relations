@@ -1,0 +1,19 @@
+<h1>Listing topics</h1>
+<div ng-controller="topicListController">
+	<table >
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th colspan="4"></th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr ng-repeat="topic in topics">
+				<td>{{ topic.title }}</td>
+				<td>{{ topic.votes }} votes</td>
+				<td><button ng-click="upVote(topic.id)" >+1</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
